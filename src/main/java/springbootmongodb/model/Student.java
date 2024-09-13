@@ -30,6 +30,9 @@ public class Student {
     @Pattern(regexp = "Giỏi|Khá|Trung bình|Yếu", message = "Invalid classification")
     private String classification;
 
+    @NotBlank(message = "Image is required")
+    private String image;
+
     // Getters and setters
 
     public String getId() {
@@ -70,5 +73,13 @@ public class Student {
 
     public void setClassification(String classification) {
         this.classification = classification;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
