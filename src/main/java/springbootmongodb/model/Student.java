@@ -33,6 +33,8 @@ public class Student {
     @NotBlank(message = "Image is required")
     private String image;
 
+
+
     // Getters and setters
 
     public String getId() {
@@ -82,4 +84,6 @@ public class Student {
     public void setImage(String image) {
         this.image = image;
     }
+
+
 }

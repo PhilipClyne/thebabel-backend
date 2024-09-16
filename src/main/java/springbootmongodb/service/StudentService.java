@@ -17,12 +17,12 @@ public class StudentService {
 
     @Autowired
     private StudentRepository studentRepository;
-    
-     public Page<Student> getStudentsWithPagination(int page, int size) {
+
+
+    public Page<Student> getStudentsWithPagination(int page, int size) {
         Pageable pageable = PageRequest.of(page, size);
         return studentRepository.findAll(pageable);
     }
-
 
     public List<Student> getAllStudents() {
         return studentRepository.findAll();
@@ -36,7 +36,6 @@ public class StudentService {
         return studentRepository.save(student);
     }
 
-
     public Student updateStudent(String id, Student student) {
         if (studentRepository.existsById(id)) {
             student.setId(id);
@@ -49,6 +48,7 @@ public class StudentService {
     public void deleteStudent(String id) {
         studentRepository.deleteById(id);
     }
+
     public List<Student> findStudentsByName(String name) {
         return studentRepository.findByName(name);
     }
@@ -60,6 +60,7 @@ public class StudentService {
     public List<Student> findStudentsByNameAndCity(String name, String city) {
         return studentRepository.findByNameAndCity(name, city);
     }
+
 
     
 }
