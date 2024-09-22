@@ -20,7 +20,7 @@ import springbootmongodb.service.BookService;
 
 @RestController
 @RequestMapping("/api/books")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class BookController {
 
     @Autowired
